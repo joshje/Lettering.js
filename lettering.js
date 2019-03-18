@@ -21,7 +21,9 @@
 		var a = a.split(splitter), inject = '';
 		if (a.length) {
 		    for(var i=0, len=a.length; item=a[i], i<len; i++) {
-				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;		    
+			if (a[i].length) {
+				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
+			}
 		    }
 			t.innerHTML = inject;
 		}
